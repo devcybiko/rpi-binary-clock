@@ -7,6 +7,7 @@
 - hard-coded to "mpy-uart"
 - hard-coded UUID = `6E400001-B5A3-F393-E0A9-E50E24DCCA9E`
     - need to research how this number is created
+
 ## GPIO
 - GPIO 0-3: Ones of seconds (0-9, little endian)
 - GPIO 4-6: Tens of seconds (0-5, little endian)
@@ -16,14 +17,16 @@
 
 ## FEATURES
 - Bluetooth allows updating the time
-    - format: HHMMSS\r\n
+    - format: HHMMSS
 - Uses RTC Module for setting/getting time
 
 ## TODO
 - wire circuit board
+    - "risers" for RPi Pico W
     - ribbon cable to LEDs
     - ribbon cable to pushbuttons
-    - "risers" for RPi Pico W
+- update BLE to use command line
+    - perhaps `key=value` or `verb value`
 - push buttons on the back
     - Hold
     - Slow
@@ -31,8 +34,6 @@
 - 5V power supply?
     - battery powered currently
     - rechargeable batteries?
-- update BLE to use command line
-    - perhaps key=value
 - Add config file (writable via BLE commands)
 - Add WiFi time setting (NTP)
     - https://bhave.sh/micropython-ntp/
