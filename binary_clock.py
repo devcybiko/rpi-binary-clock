@@ -47,7 +47,7 @@ def get_datetime():
         "secs": now[6],
         "subsecs": now[7],
     }
-    return dict;
+    return dict
 
 def next_datetime(now):
     now["secs"]=(now["secs"]+1)%60
@@ -55,7 +55,7 @@ def next_datetime(now):
         now["mins"]=(now["mins"]+1)%60
         if now["mins"]==0:
             now["hours"]=(now["hours"]+1)%24
-    return now;
+    return now
 
 def split_int(n, d):
     a = int(n/d)
@@ -66,8 +66,16 @@ def set_leds(bits, leds):
     for i in range(0, len(leds)):
         leds[i].value(bits[i])
 
+def to_binary(n, bits):
+    arr = []
+    for _ in range(bits):
+        bit = n % 2
+        arr.append(bit)
+        n = n >> 1
+    return arr
+
 def main():
-    [ble, sp] = init_ble();
+    [ble, sp] = init_ble()
     set_time(12,0,0)
     print(rtc.datetime())
     print("starting...")
@@ -84,8 +92,8 @@ def main():
             sp.on_write(on_rx)  # Set the callback function for data reception
         time.sleep_ms(500)
         now = get_datetime()
-        #now = next_datetime(now);
-        #newtime=to_tuple(now);
+        #now = next_datetime(now)
+        #newtime=to_tuple(now)
         hours = now["hours"] % 12
         mins = now["mins"]
         secs = now["secs"]
@@ -113,17 +121,5 @@ def main():
         print("...")
         #rtc.datetime(newtime)
         #print("?",now)
-
-def to_binary(n):
-    a = n % 2
-    n = n >> 1
-    b = n % 2
-    n = n >> 1
-    c = n % 2
-    n = n >> 1
-    d = n % 2
-    arr = [d, c, b, a]
-    arr.reverse()
-    return arr
     
 main()

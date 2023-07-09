@@ -52,7 +52,7 @@
 - ble_simple_peripheral.py
     - creates the serial port connection
 - ble_blink.py
-    - toggle led with BLE
+    - exaple: toggle led with BLE
 - localtime.py
     - sample of how to do the binary math etc...
 
