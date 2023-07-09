@@ -1,13 +1,12 @@
 # rpi-binary-clock
+<img src="https://agilefrontiers.com/assets/images/binaryclock.jpg" width=320></img>
 - Converting an old, broken Graymark Binary Clock to use RPi-Pico-W
-- My Binary Clock project using Raspberry Pi Pico W and micropython
 - NOTE: I selected micropython over circuitpython because uPy supported the BLE chip
 - I also use AdaFruit's BlueFruit app on iOS to communicate with the clock
     - in UART mode
 - hard-coded to "mpy-uart"
 - hard-coded UUID = `6E400001-B5A3-F393-E0A9-E50E24DCCA9E`
     - need to research how this number is created
-
 ## GPIO
 - GPIO 0-3: Ones of seconds (0-9, little endian)
 - GPIO 4-6: Tens of seconds (0-5, little endian)
@@ -60,6 +59,8 @@
 ## REFERENCES
 - Hackster article describing bluetooth low energy
     - https://www.hackster.io/Ramji_Patel/raspberry-pi-pico-w-and-bluetooth-low-energy-a829c7
+- uPy Docs on BLE
+    - https://docs.micropython.org/en/latest/library/bluetooth.html
 - uPy Github Repo for BLE
     - https://github.com/micropython/micropython/tree/master/examples/bluetooth
 - Graymark Binary Clock: https://www.worthpoint.com/worthopedia/vintage-binary-clock-graymark-model-19959448
