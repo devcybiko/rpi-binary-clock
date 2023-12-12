@@ -58,7 +58,9 @@
     - sample of how to do the binary math etc...
 
 ## REFERENCES
-- Hackster article describing bluetooth low energy
+- Hackster.io article on my project
+    - https://www.hackster.io/news/greg-smith-gives-a-beloved-1970s-binary-clock-a-micropython-upgrade-with-a-raspberry-pi-pico-w-c814e78032a6
+- Hackster.io article describing bluetooth low energy
     - https://www.hackster.io/Ramji_Patel/raspberry-pi-pico-w-and-bluetooth-low-energy-a829c7
 - uPy Docs on BLE
     - https://docs.micropython.org/en/latest/library/bluetooth.html
